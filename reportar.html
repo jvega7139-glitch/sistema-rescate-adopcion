@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario para reportar animales rescatados">
+    <title>Reportar rescate | Rescate y Adopción</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Registro de animales rescatados</h1>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reportar.html" aria-current="page">Reportar rescate</a></li>
+                <li><a href="rescates.html">Ver rescates</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Formulario de reporte</h2>
+            <p>Complete los siguientes campos para reportar un animal rescatado.</p>
+
+            <form action="#" method="get">
+
+                <fieldset>
+                    <legend>Información del animal</legend>
+
+                    <label for="nombre">Nombre del animal:</label>
+                    <input type="text" id="nombre" name="nombre"
+                           maxlength="50" required>
+                    <br><br>
+
+                    <label for="tipo">Tipo de animal:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="Perro">Perro</option>
+                        <option value="Gato">Gato</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                    <br><br>
+
+                    <label for="edad">Edad aproximada:</label>
+                    <input type="number" id="edad" name="edad"
+                           min="0" max="50" required>
+                    <br><br>
+
+                    <label for="estado">Estado del animal:</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Seleccione una opción</option>
+                        <option value="Bueno">Bueno</option>
+                        <option value="Herido">Herido</option>
+                        <option value="Delicado">Delicado</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Información del rescate</legend>
+
+                    <label for="fecha">Fecha del rescate:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                    <br><br>
+
+                    <label for="ubicacion">Lugar del rescate:</label>
+                    <input type="text" id="ubicacion" name="ubicacion"
+                           maxlength="100" required>
+                    <br><br>
+
+                    <label for="descripcion">Descripción del rescate:</label>
+                    <textarea id="descripcion" name="descripcion"
+                              rows="5" maxlength="500" required></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Datos de la persona que reporta</legend>
+
+                    <label for="reportante">Nombre completo:</label>
+                    <input type="text" id="reportante" name="reportante"
+                           maxlength="100" required>
+                    <br><br>
+
+                    <label for="telefono">Número de contacto:</label>
+                    <input type="tel" id="telefono" name="telefono"
+                           pattern="[0-9]{10}"
+                           title="Ingrese un número de 10 dígitos"
+                           required>
+                    <br><br>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </fieldset>
+
+                <button type="submit">Enviar reporte</button>
+                <button type="reset">Limpiar formulario</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sistema de Control de Rescate y Adopción.</p>
+    </footer>
+
+</body>
+</html>
